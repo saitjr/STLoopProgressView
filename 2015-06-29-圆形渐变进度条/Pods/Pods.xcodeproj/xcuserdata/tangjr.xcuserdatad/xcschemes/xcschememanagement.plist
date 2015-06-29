@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Pods-2015-06-29-圆形渐变进度条-TKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-2015-06-29-圆形渐变进度条-pop.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-2015-06-29-圆形渐变进度条.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>AC87B191B0E8AEB1E8737BA2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ACDB4B3DCAC2D67643B750B2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EACC87ED3D6FE111DAAC3711</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
