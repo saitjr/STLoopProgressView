@@ -1,8 +1,0 @@
-#include "Pods-2015-06-29-圆形渐变进度条-pop.xcconfig"
-CLANG_CXX_LANGUAGE_STANDARD = ${PODS____________________POP_CLANG_CXX_LANGUAGE_STANDARD}
-CLANG_CXX_LIBRARY = ${PODS____________________POP_CLANG_CXX_LIBRARY}
-GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/pop" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/TKit" "${PODS_ROOT}/Headers/Public/pop"
-OTHER_LDFLAGS = ${PODS____________________POP_OTHER_LDFLAGS} -ObjC
-PODS_ROOT = ${SRCROOT}
-SKIP_INSTALL = YES

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>4B256BB9-AC34-4B90-BD14-919BF23ACE67</string>
+	<key>IDESourceControlProjectName</key>
+	<string>2015-06-29-圆形渐变进度条</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E94A9FE4188C175734051100F01CAD7A4A314EC0</key>
+		<string>https://github.com/saitjr/LoopProgressDemo.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>2015-06-29-圆形渐变进度条/2015-06-29-圆形渐变进度条.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E94A9FE4188C175734051100F01CAD7A4A314EC0</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/saitjr/LoopProgressDemo.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E94A9FE4188C175734051100F01CAD7A4A314EC0</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E94A9FE4188C175734051100F01CAD7A4A314EC0</string>
+			<key>IDESourceControlWCCName</key>
+			<string>LoopProgressDemo</string>
+		</dict>
+	</array>
+</dict>
+</plist>

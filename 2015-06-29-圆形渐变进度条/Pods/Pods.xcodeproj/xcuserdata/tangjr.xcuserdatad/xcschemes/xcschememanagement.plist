@@ -9,11 +9,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-2015-06-29-圆形渐变进度条-pop.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-2015-06-29-圆形渐变进度条.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +17,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>AC87B191B0E8AEB1E8737BA2</key>
+		<key>A24D5FF7533F8F9A4F7415AA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>ACDB4B3DCAC2D67643B750B2</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>EACC87ED3D6FE111DAAC3711</key>
+		<key>BE35894A703A20504EBB5620</key>
 		<dict>
 			<key>primary</key>
 			<true/>
