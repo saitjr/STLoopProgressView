@@ -7,11 +7,11 @@
 //
 
 #import "ViewController.h"
-#import "CircleView.h"
+#import "TCircleView.h"
 
 @interface ViewController ()
 
-@property (weak, nonatomic) IBOutlet CircleView *circleView;
+@property (weak, nonatomic) IBOutlet TCircleView *circleView;
 - (IBAction)sliderValueChanged:(UISlider *)sender;
 
 @end

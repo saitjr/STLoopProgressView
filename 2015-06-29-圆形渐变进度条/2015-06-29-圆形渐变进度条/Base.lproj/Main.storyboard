@@ -25,7 +25,7 @@
                                     <action selector="sliderValueChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="Rys-kL-BtV"/>
                                 </connections>
                             </slider>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TNK-6j-IwN" customClass="CircleView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TNK-6j-IwN" customClass="TCircleView">
                                 <rect key="frame" x="150" y="150" width="300" height="300"/>
                                 <color key="backgroundColor" red="0.14901961386203766" green="0.50980395078659058" blue="0.83529412746429443" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>

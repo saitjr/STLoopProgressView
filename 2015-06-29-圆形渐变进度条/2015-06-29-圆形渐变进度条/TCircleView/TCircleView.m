@@ -6,13 +6,14 @@
 //  Copyright (c) 2015 tangjr. All rights reserved.
 //
 
-#import "CircleView.h"
+#import "TCircleView.h"
 #import <TKit.h>
 #import <POP.h>
+#import "UIColor+TCircleColor.h"
 
 #define DEGREES_TO_RADOANS(x) (M_PI*(x)/180.0) // 讲角度转为弧度
 
-@interface CircleView ()
+@interface TCircleView ()
 
 @property (strong, nonatomic) CAShapeLayer *colorMaskLayer; // 渐变色遮罩
 @property (strong, nonatomic) CAShapeLayer *colorLayer; // 渐变色
@@ -20,7 +21,7 @@
 
 @end
 
-@implementation CircleView
+@implementation TCircleView
 
 - (void)awakeFromNib {
     
@@ -55,13 +56,13 @@
     CAGradientLayer *leftLayer = [CAGradientLayer layer];
     leftLayer.frame = CGRectMake(0, 0, self.width / 2, self.height);
     leftLayer.locations = @[@0.3, @0.9, @1];
-    leftLayer.colors = @[(id)[UIColor yellowColor].CGColor, (id)[UIColor greenColor].CGColor];
+    leftLayer.colors = @[(id)[UIColor centerColor].CGColor, (id)[UIColor startColor].CGColor];
     [self.colorLayer addSublayer:leftLayer];
     
     CAGradientLayer *rightLayer = [CAGradientLayer layer];
     rightLayer.frame = CGRectMake(self.width / 2, 0, self.width / 2, self.height);
     rightLayer.locations = @[@0.3, @0.9, @1];
-    rightLayer.colors = @[(id)[UIColor yellowColor].CGColor, (id)[UIColor redColor].CGColor];
+    rightLayer.colors = @[(id)[UIColor centerColor].CGColor, (id)[UIColor endColor].CGColor];
     [self.colorLayer addSublayer:rightLayer];
 }
 

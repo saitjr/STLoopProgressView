@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CircleView : UIView
+@interface TCircleView : UIView
 
 @property (assign, nonatomic) CGFloat persentage;
 
