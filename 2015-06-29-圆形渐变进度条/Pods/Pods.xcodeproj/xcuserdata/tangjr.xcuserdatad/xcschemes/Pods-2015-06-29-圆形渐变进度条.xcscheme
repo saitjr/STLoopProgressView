@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A24D5FF7533F8F9A4F7415AA"
+               BlueprintIdentifier = "5E709A1E8BC262907D8CE79B"
                BuildableName = "libPods-2015-06-29-圆形渐变进度条.a"
                BlueprintName = "Pods-2015-06-29-圆形渐变进度条"
                ReferencedContainer = "container:Pods.xcodeproj">

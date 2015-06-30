@@ -8,6 +8,7 @@
 
 #import "CircleView.h"
 #import <TKit.h>
+#import <POP.h>
 
 #define DEGREES_TO_RADOANS(x) (M_PI*(x)/180.0) // 讲角度转为弧度
 
@@ -97,7 +98,8 @@
 - (void)setPersentage:(CGFloat)persentage {
     
     _persentage = persentage;
-    self.colorMaskLayer.strokeEnd = persentage;
+    //    self.colorMaskLayer.strokeEnd = persentage; // 没有回弹动画
+    [self animationWithStrokeEnd:persentage]; // 有回弹动画
 }
 
 - (CAShapeLayer *)colorMaskLayer {
@@ -107,6 +109,15 @@
         _colorMaskLayer = [CAShapeLayer layer];
     }
     return _colorMaskLayer;
+}
+
+- (void)animationWithStrokeEnd:(CGFloat)strokeEnd {
+    
+    POPSpringAnimation *strokeAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPShapeLayerStrokeEnd];
+    strokeAnimation.toValue = @(strokeEnd);
+    strokeAnimation.springBounciness = 12.f;
+    strokeAnimation.removedOnCompletion = NO;
+    [self.colorMaskLayer pop_addAnimation:strokeAnimation forKey:@"layerStrokeAnimation"];
 }
 
 @end
