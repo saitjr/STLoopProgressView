@@ -14,8 +14,8 @@
 		96193DBA1B40EA6700845427 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96193DB91B40EA6700845427 /* Images.xcassets */; };
 		96193DBD1B40EA6700845427 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96193DBB1B40EA6700845427 /* LaunchScreen.xib */; };
 		96193DC91B40EA6700845427 /* _015_06_29________Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96193DC81B40EA6700845427 /* _015_06_29________Tests.m */; };
+		96B7DD091B43777F005E854A /* TCircleView+BaseConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B7DD081B43777F005E854A /* TCircleView+BaseConfiguration.m */; };
 		96CF27411B42F06A007D40EF /* TCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CF273F1B42F06A007D40EF /* TCircleView.m */; };
-		96CF27441B42F6E6007D40EF /* UIColor+TCircleColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CF27431B42F6E6007D40EF /* UIColor+TCircleColor.m */; };
 		F9BF70EEB5F9D63AE847C834 /* libPods-2015-06-29-圆形渐变进度条.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FC9246D5E5934EB0BA5444C /* libPods-2015-06-29-圆形渐变进度条.a */; };
 /* End PBXBuildFile section */
 
@@ -46,10 +46,10 @@
 		96193DC21B40EA6700845427 /* 2015-06-29-圆形渐变进度条Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "2015-06-29-圆形渐变进度条Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96193DC71B40EA6700845427 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96193DC81B40EA6700845427 /* _015_06_29________Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_015_06_29________Tests.m"; sourceTree = "<group>"; };
+		96B7DD071B43777F005E854A /* TCircleView+BaseConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TCircleView+BaseConfiguration.h"; sourceTree = "<group>"; };
+		96B7DD081B43777F005E854A /* TCircleView+BaseConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TCircleView+BaseConfiguration.m"; sourceTree = "<group>"; };
 		96CF273E1B42F06A007D40EF /* TCircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCircleView.h; sourceTree = "<group>"; };
 		96CF273F1B42F06A007D40EF /* TCircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCircleView.m; sourceTree = "<group>"; };
-		96CF27421B42F6E6007D40EF /* UIColor+TCircleColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+TCircleColor.h"; sourceTree = "<group>"; };
-		96CF27431B42F6E6007D40EF /* UIColor+TCircleColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+TCircleColor.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,8 +155,8 @@
 			children = (
 				96CF273E1B42F06A007D40EF /* TCircleView.h */,
 				96CF273F1B42F06A007D40EF /* TCircleView.m */,
-				96CF27421B42F6E6007D40EF /* UIColor+TCircleColor.h */,
-				96CF27431B42F6E6007D40EF /* UIColor+TCircleColor.m */,
+				96B7DD071B43777F005E854A /* TCircleView+BaseConfiguration.h */,
+				96B7DD081B43777F005E854A /* TCircleView+BaseConfiguration.m */,
 			);
 			path = TCircleView;
 			sourceTree = "<group>";
@@ -299,8 +299,8 @@
 				96193DB51B40EA6700845427 /* ViewController.m in Sources */,
 				96193DB21B40EA6700845427 /* AppDelegate.m in Sources */,
 				96CF27411B42F06A007D40EF /* TCircleView.m in Sources */,
-				96CF27441B42F6E6007D40EF /* UIColor+TCircleColor.m in Sources */,
 				96193DAF1B40EA6700845427 /* main.m in Sources */,
+				96B7DD091B43777F005E854A /* TCircleView+BaseConfiguration.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

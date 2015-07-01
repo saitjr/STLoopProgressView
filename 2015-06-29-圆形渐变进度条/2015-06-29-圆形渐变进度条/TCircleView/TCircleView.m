@@ -9,9 +9,7 @@
 #import "TCircleView.h"
 #import <TKit.h>
 #import <POP.h>
-#import "UIColor+TCircleColor.h"
-
-#define DEGREES_TO_RADOANS(x) (M_PI*(x)/180.0) // 讲角度转为弧度
+#import "TCircleView+BaseConfiguration.h"
 
 @interface TCircleView ()
 
@@ -27,7 +25,7 @@
     
     [super awakeFromNib];
     
-    self.backgroundColor = [UIColor colorWithHex:0x2682D5 alpha:0.5];
+    self.backgroundColor = [TCircleView backgroundColor];
     
     [self setupBlueMaskLayer];
     [self setupColorLayer];
@@ -55,14 +53,15 @@
 
     CAGradientLayer *leftLayer = [CAGradientLayer layer];
     leftLayer.frame = CGRectMake(0, 0, self.width / 2, self.height);
+    // 分段设置渐变色
     leftLayer.locations = @[@0.3, @0.9, @1];
-    leftLayer.colors = @[(id)[UIColor centerColor].CGColor, (id)[UIColor startColor].CGColor];
+    leftLayer.colors = @[(id)[TCircleView centerColor].CGColor, (id)[TCircleView startColor].CGColor];
     [self.colorLayer addSublayer:leftLayer];
     
     CAGradientLayer *rightLayer = [CAGradientLayer layer];
     rightLayer.frame = CGRectMake(self.width / 2, 0, self.width / 2, self.height);
     rightLayer.locations = @[@0.3, @0.9, @1];
-    rightLayer.colors = @[(id)[UIColor centerColor].CGColor, (id)[UIColor endColor].CGColor];
+    rightLayer.colors = @[(id)[TCircleView centerColor].CGColor, (id)[TCircleView endColor].CGColor];
     [self.colorLayer addSublayer:rightLayer];
 }
 
@@ -72,7 +71,7 @@
 - (void)setupColorMaskLayer {
     
     CAShapeLayer *layer = [self generateMaskLayer];
-    layer.lineWidth = 21; // 渐变遮罩线宽较大，防止蓝色遮罩有边露出来
+    layer.lineWidth =[TCircleView lineWidth] + 0.5; // 渐变遮罩线宽较大，防止蓝色遮罩有边露出来
     self.colorLayer.mask = layer;
     self.colorMaskLayer = layer;
 }
@@ -87,21 +86,44 @@
     
     CAShapeLayer *layer = [CAShapeLayer layer];
     layer.frame = self.bounds;
-    UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.width / 2, self.height / 2) radius:self.width / 2.5 startAngle:DEGREES_TO_RADOANS(-240) endAngle:DEGREES_TO_RADOANS(60) clockwise:YES];
-    layer.lineWidth = 20;
+    
+    // 创建一个圆心为父视图中点的圆，半径为父视图宽的2/5，起始角度是从-240°到60°
+    UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.width / 2, self.height / 2) radius:self.width / 2.5 startAngle:[TCircleView startAngle] endAngle:[TCircleView endAngle] clockwise:YES];
+    layer.lineWidth = [TCircleView lineWidth];
     layer.path = path.CGPath;
     layer.fillColor = [UIColor clearColor].CGColor; // 填充色为透明（不设置为黑色）
     layer.strokeColor = [UIColor blackColor].CGColor; // 随便设置一个边框颜色
-    layer.lineCap = kCALineCapRound;
+    layer.lineCap = kCALineCapRound; // 设置线为圆角
     return layer;
 }
 
+/**
+ *  在修改百分比的时候，修改彩色遮罩的大小
+ *
+ *  @param persentage 百分比
+ */
 - (void)setPersentage:(CGFloat)persentage {
     
     _persentage = persentage;
     //    self.colorMaskLayer.strokeEnd = persentage; // 没有回弹动画
     [self animationWithStrokeEnd:persentage]; // 有回弹动画
 }
+
+/**
+ *  进度条弹性动画
+ *
+ *  @param strokeEnd 进度条结束的位置（当前百分比）
+ */
+- (void)animationWithStrokeEnd:(CGFloat)strokeEnd {
+    
+    POPSpringAnimation *strokeAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPShapeLayerStrokeEnd];
+    strokeAnimation.toValue = @(strokeEnd);
+    strokeAnimation.springBounciness = 12.f;
+    strokeAnimation.removedOnCompletion = NO;
+    [self.colorMaskLayer pop_addAnimation:strokeAnimation forKey:@"layerStrokeAnimation"];
+}
+
+#pragma mark - 懒加载
 
 - (CAShapeLayer *)colorMaskLayer {
     
@@ -110,15 +132,6 @@
         _colorMaskLayer = [CAShapeLayer layer];
     }
     return _colorMaskLayer;
-}
-
-- (void)animationWithStrokeEnd:(CGFloat)strokeEnd {
-    
-    POPSpringAnimation *strokeAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPShapeLayerStrokeEnd];
-    strokeAnimation.toValue = @(strokeEnd);
-    strokeAnimation.springBounciness = 12.f;
-    strokeAnimation.removedOnCompletion = NO;
-    [self.colorMaskLayer pop_addAnimation:strokeAnimation forKey:@"layerStrokeAnimation"];
 }
 
 @end
