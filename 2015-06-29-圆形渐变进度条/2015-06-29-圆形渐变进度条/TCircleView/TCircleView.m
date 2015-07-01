@@ -28,8 +28,8 @@
     self.backgroundColor = [TCircleView backgroundColor];
     
     [self setupColorLayer];
-//    [self setupColorMaskLayer];
-//    [self setupBlueMaskLayer];
+    [self setupColorMaskLayer];
+    [self setupBlueMaskLayer];
 }
 
 /**
@@ -73,8 +73,6 @@
     CAShapeLayer *layer = [self generateMaskLayer];
     layer.lineWidth =[TCircleView lineWidth] + 0.5; // 渐变遮罩线宽较大，防止蓝色遮罩有边露出来
     self.colorLayer.mask = layer;
-    
-    self.colorMaskLayer = [CAShapeLayer layer];
     self.colorMaskLayer = layer;
 }
 
@@ -123,17 +121,6 @@
     strokeAnimation.springBounciness = 12.f;
     strokeAnimation.removedOnCompletion = NO;
     [self.colorMaskLayer pop_addAnimation:strokeAnimation forKey:@"layerStrokeAnimation"];
-}
-
-#pragma mark - 懒加载
-
-- (CAShapeLayer *)colorMaskLayer {
-    
-    if (!_colorMaskLayer) {
-        
-        _colorMaskLayer = [CAShapeLayer layer];
-    }
-    return _colorMaskLayer;
 }
 
 @end
