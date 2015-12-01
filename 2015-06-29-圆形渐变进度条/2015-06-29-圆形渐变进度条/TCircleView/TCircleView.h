@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM (NSInteger, TCircleViewClockWiseType) {
+    TCircleViewClockWiseYes,
+    TCircleViewClockWiseNo
+};
+
 @interface TCircleView : UIView
 
 @property (assign, nonatomic) CGFloat persentage;

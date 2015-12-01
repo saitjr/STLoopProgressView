@@ -48,4 +48,8 @@
     return DEGREES_TO_RADOANS(60);
 }
 
++ (TCircleViewClockWiseType)clockWiseType {
+    return NO;
+}
+
 @end

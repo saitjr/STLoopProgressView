@@ -25,10 +25,13 @@
 // 线宽
 + (CGFloat)lineWidth;
 
-// 起始角度
+// 起始角度（根据顺时针计算，逆时针则是结束角度）
 + (CGFloat)startAngle;
 
-// 结束角度
+// 结束角度（根据顺时针计算，逆时针则是起始角度）
 + (CGFloat)endAngle;
+
+// 进度条起始方向（YES为顺时针，NO为逆时针）
++ (TCircleViewClockWiseType)clockWiseType;
 
 @end

@@ -71,7 +71,7 @@
 - (void)setupColorMaskLayer {
     
     CAShapeLayer *layer = [self generateMaskLayer];
-    layer.lineWidth =[TCircleView lineWidth] + 0.5; // 渐变遮罩线宽较大，防止蓝色遮罩有边露出来
+    layer.lineWidth = [TCircleView lineWidth] + 0.5; // 渐变遮罩线宽较大，防止蓝色遮罩有边露出来
     self.colorLayer.mask = layer;
     self.colorMaskLayer = layer;
 }
@@ -88,7 +88,14 @@
     layer.frame = self.bounds;
     
     // 创建一个圆心为父视图中点的圆，半径为父视图宽的2/5，起始角度是从-240°到60°
-    UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.width / 2, self.height / 2) radius:self.width / 2.5 startAngle:[TCircleView startAngle] endAngle:[TCircleView endAngle] clockwise:YES];
+    
+    UIBezierPath *path = nil;
+    if ([TCircleView clockWiseType]) {
+        path = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.width / 2, self.height / 2) radius:self.width / 2.5 startAngle:[TCircleView startAngle] endAngle:[TCircleView endAngle] clockwise:YES];
+    } else {
+        path = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.width / 2, self.height / 2) radius:self.width / 2.5 startAngle:[TCircleView endAngle] endAngle:[TCircleView startAngle] clockwise:NO];
+    }
+    
     layer.lineWidth = [TCircleView lineWidth];
     layer.path = path.CGPath;
     layer.fillColor = [UIColor clearColor].CGColor; // 填充色为透明（不设置为黑色）
