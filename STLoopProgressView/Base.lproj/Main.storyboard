@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="m1c-p6-aCR">
+                                <rect key="frame" x="48" y="520" width="504" height="31"/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="MDY-iq-E3U"/>
+                                </connections>
+                            </slider>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TfK-OC-2ou" customClass="STLoopProgressView">
+                                <rect key="frame" x="150" y="150" width="300" height="300"/>
+                                <color key="backgroundColor" red="0.14901960784313725" green="0.50980392156862742" blue="0.83529411764705885" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="63o-Yw-RUM"/>
+                                    <constraint firstAttribute="width" constant="300" id="ebA-Tf-C6w"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="m1c-p6-aCR" secondAttribute="trailing" constant="50" id="D06-eO-hvu"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="m1c-p6-aCR" secondAttribute="bottom" constant="50" id="Kld-GG-UEF"/>
+                            <constraint firstItem="m1c-p6-aCR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50" id="SCA-Aw-3Mj"/>
+                            <constraint firstItem="TfK-OC-2ou" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qHM-fI-SWo"/>
+                            <constraint firstItem="TfK-OC-2ou" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ylA-ia-VQg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loopProgressView" destination="TfK-OC-2ou" id="Ynb-Ql-xU9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
