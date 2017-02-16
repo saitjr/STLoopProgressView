@@ -29,7 +29,7 @@
 
 + (UIColor *)backgroundColor {
     
-    return [UIColor colorWithRed:38 green:130 blue:213 alpha:0.5];
+    return [UIColor colorWithRed:38.0 / 255.0 green:130.0 / 255.0 blue:213.0 / 255.0 alpha:0.5];
 }
 
 + (CGFloat)lineWidth {
